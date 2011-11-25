@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125102214) do
+ActiveRecord::Schema.define(:version => 20111125102215) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -50,6 +50,29 @@ ActiveRecord::Schema.define(:version => 20111125102214) do
     t.string   "formatted_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "impact_factor"
+    t.integer  "number_of_citations"
+    t.integer  "year_published"
+    t.integer  "number_of_authors"
+    t.string   "publication_type"
+    t.string   "coordinates"
+    t.string   "georeference_system"
+    t.string   "location_commentaries"
+    t.float    "patch_size"
+    t.integer  "number_of_patches"
+    t.float    "time_of_works"
+    t.float    "monitoring_time"
+    t.string   "insite_offsite"
+    t.string   "study_scale"
+    t.string   "microclimate"
+    t.string   "climate_change"
+    t.string   "slope"
+    t.string   "orientation"
+    t.string   "seeding_seedling"
+    t.string   "terrestrial_aquatic"
+    t.string   "facilitation"
+    t.string   "primary_secondary"
+    t.string   "spontaneous_technical"
   end
 
 end
