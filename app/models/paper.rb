@@ -9,4 +9,8 @@ class Paper < ActiveRecord::Base
   validates_numericality_of       :number_of_patches
   validates_numericality_of       :time_of_works
   validates_numericality_of       :monitoring_time
+  
+  has_and_belongs_to_many :planttraits
+  
+  belongs_to :climate
 end
