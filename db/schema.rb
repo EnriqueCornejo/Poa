@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125180407) do
+ActiveRecord::Schema.define(:version => 20111126112650) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -101,6 +101,14 @@ ActiveRecord::Schema.define(:version => 20111125180407) do
     t.string   "facilitation"
     t.string   "primary_secondary"
     t.string   "spontaneous_technical"
+    t.integer  "climate_id"
+  end
+
+  create_table "papers_planttraits", :force => true do |t|
+    t.integer  "paper_id",      :null => false
+    t.integer  "planttrait_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "plantcommunities", :force => true do |t|

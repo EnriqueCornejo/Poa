@@ -12,6 +12,7 @@ ActiveAdmin.register Paper do
       f.input :coordinates
       f.input :georeference_system
       f.input :location_commentaries
+      f.input :climate
     end
     f.inputs "Experimental Design" do
       f.input :patch_size
@@ -29,6 +30,9 @@ ActiveAdmin.register Paper do
       f.input :facilitation, :as => :select, :collection => ["Yes", "No"]
       f.input :primary_secondary, :as => :select, :collection => ["Primary Successsion", "Secondary Succession"]
       f.input :spontaneous_technical, :as => :select, :collection => ["Spontaneous Succession", "Technical Reclamation"]
+    end
+    f.inputs do
+      f.input :planttraits, :as => :check_boxes, :collection => Planttrait.find(:all, :order => "planttrait_code ASC")
     end
     f.buttons
   end
