@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ptrait: MyString
+  ptrait_code: MyString
+
+two:
+  ptrait: MyString
+  ptrait_code: MyString

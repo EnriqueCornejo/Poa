@@ -10,7 +10,12 @@ class Paper < ActiveRecord::Base
   validates_numericality_of       :time_of_works
   validates_numericality_of       :monitoring_time
   
-  has_and_belongs_to_many :planttraits
+  has_and_belongs_to_many :ptraits
+  has_and_belongs_to_many :nobs
+  has_and_belongs_to_many :hibs
+  has_and_belongs_to_many :landuses
+  has_and_belongs_to_many :plantcommunities
+
   
   belongs_to :climate
 end

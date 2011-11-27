@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111126112650) do
+ActiveRecord::Schema.define(:version => 20111127175430) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(:version => 20111126112650) do
     t.datetime "updated_at"
   end
 
+  create_table "hibs_papers", :force => true do |t|
+    t.integer  "hib_id"
+    t.integer  "paper_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "landuses", :force => true do |t|
     t.string   "landuse"
     t.string   "landuse_code"
@@ -67,9 +74,23 @@ ActiveRecord::Schema.define(:version => 20111126112650) do
     t.datetime "updated_at"
   end
 
+  create_table "landuses_papers", :force => true do |t|
+    t.integer  "landuse_id"
+    t.integer  "paper_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "nobs", :force => true do |t|
     t.string   "nob"
     t.string   "nob_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "nobs_papers", :force => true do |t|
+    t.integer  "nob_id"
+    t.integer  "paper_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -104,9 +125,23 @@ ActiveRecord::Schema.define(:version => 20111126112650) do
     t.integer  "climate_id"
   end
 
+  create_table "papers_plantcommunities", :force => true do |t|
+    t.integer  "paper_id"
+    t.integer  "plantcommunity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "papers_planttraits", :force => true do |t|
     t.integer  "paper_id",      :null => false
     t.integer  "planttrait_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "papers_ptraits", :force => true do |t|
+    t.integer  "paper_id"
+    t.integer  "ptrait_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -121,6 +156,13 @@ ActiveRecord::Schema.define(:version => 20111126112650) do
   create_table "planttraits", :force => true do |t|
     t.string   "planttrait"
     t.string   "planttrait_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ptraits", :force => true do |t|
+    t.string   "ptrait"
+    t.string   "ptrait_code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

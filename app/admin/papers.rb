@@ -6,13 +6,16 @@ ActiveAdmin.register Paper do
       f.input :number_of_citations
       f.input :year_published
       f.input :number_of_authors
-      f.input :publication_type
+      f.input :publication_type, :as => :select, :collection => ["Book", "Book Chapter", "Article", "Review", "Editor", "Restricted Scientific or Technical Paper", "Other"]
     end
     f.inputs "Site" do
       f.input :coordinates
       f.input :georeference_system
       f.input :location_commentaries
       f.input :climate
+      f.input :landuses, :as => :check_boxes
+      f.input :hibs, :as => :check_boxes
+      f.input :plantcommunities, :as => :check_boxes
     end
     f.inputs "Experimental Design" do
       f.input :patch_size
@@ -32,7 +35,8 @@ ActiveAdmin.register Paper do
       f.input :spontaneous_technical, :as => :select, :collection => ["Spontaneous Succession", "Technical Reclamation"]
     end
     f.inputs do
-      f.input :planttraits, :as => :check_boxes, :collection => Planttrait.find(:all, :order => "planttrait_code ASC")
+      f.input :ptraits, :as => :check_boxes, :label => "Plant Traits"
+      f.input :nobs, :as => :check_boxes, :label => "NOBs"
     end
     f.buttons
   end
