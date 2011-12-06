@@ -2,6 +2,8 @@ ActiveAdmin.register Paper do
   form do |f|
     f.inputs "Paper" do
       f.input :formatted_name
+      f.input :sample
+      f.input :subsample
       f.input :impact_factor
       f.input :number_of_citations
       f.input :year_published

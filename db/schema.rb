@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111127175430) do
+ActiveRecord::Schema.define(:version => 20111206095351) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -123,6 +123,8 @@ ActiveRecord::Schema.define(:version => 20111127175430) do
     t.string   "primary_secondary"
     t.string   "spontaneous_technical"
     t.integer  "climate_id"
+    t.integer  "subsample"
+    t.integer  "sample"
   end
 
   create_table "papers_plantcommunities", :force => true do |t|

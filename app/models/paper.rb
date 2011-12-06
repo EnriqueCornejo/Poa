@@ -1,5 +1,7 @@
 class Paper < ActiveRecord::Base
   validates_presence_of           :formatted_name
+  validates_presence_of           :sample
+  validates_presence_of           :subsample
   validates_uniqueness_of         :formatted_name
   validates_numericality_of       :impact_factor
   validates_numericality_of       :number_of_citations
