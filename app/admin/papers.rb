@@ -24,17 +24,17 @@ ActiveAdmin.register Paper do
       f.input :number_of_patches
       f.input :time_of_works
       f.input :monitoring_time
-      f.input :insite_offsite, :as => :select, :collection => ["Insite", "Offsite"]
+      f.input :insite_offsite, :as => :select, :collection => ["Insite", "Offsite", "Both"]
       f.input :study_scale, :as => :select, :collection => ["Micro", "Meso", "Landscape"]
       f.input :microclimate, :as => :select, :collection => ["Yes", "No"]
       f.input :climate_change, :as => :select, :collection => ["Yes", "No"]
       f.input :slope, :as => :select, :collection => ["Yes", "No"]
       f.input :orientation, :as => :select, :collection => ["Yes", "No"]
-      f.input :seeding_seedling, :as => :select, :collection => ["Seeding", "Seedling"]
-      f.input :terrestrial_aquatic, :as => :select, :collection => ["Terrestrial", "Aquatic"]
+      f.input :seeding_seedling, :as => :select, :collection => ["Seeding", "Seedling", "Both"]
+      f.input :terrestrial_aquatic, :as => :select, :collection => ["Terrestrial", "Aquatic", "Both"]
       f.input :facilitation, :as => :select, :collection => ["Yes", "No"]
-      f.input :primary_secondary, :as => :select, :collection => ["Primary Successsion", "Secondary Succession"]
-      f.input :spontaneous_technical, :as => :select, :collection => ["Spontaneous Succession", "Technical Reclamation"]
+      f.input :primary_secondary, :as => :select, :collection => ["Primary Successsion", "Secondary Succession", "Both"]
+      f.input :spontaneous_technical, :as => :select, :collection => ["Spontaneous Succession", "Technical Reclamation", "Both"]
     end
     f.inputs do
       f.input :ptraits, :as => :check_boxes, :label => "Plant Traits"
