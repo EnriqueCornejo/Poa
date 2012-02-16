@@ -1,4 +1,6 @@
 ActiveAdmin.register Paper do
+  menu :label => "Samples"
+  
   form do |f|
     f.inputs "Paper" do
       f.input :formatted_name
