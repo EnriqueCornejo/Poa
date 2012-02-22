@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -133,7 +134,7 @@ Landuse.create([
 Plantcommunity.destroy_all
 
 Plantcommunity.create([
-  {plantcommunity_code: "1",   plantcommunity: "Bosque denso (árboles de más de 5m cuyas copas se tocan)"},
+  {plantcommunity_code: "1",   plantcommunity: "Bosque denso (arboles de mas de 5m cuyas copas se tocan)"},
   {plantcommunity_code: "1.1", plantcommunity: "Mayormente sempervirente"},
   {plantcommunity_code: "1.2", plantcommunity: "Mayormente deciduo"},
   {plantcommunity_code: "1.3", plantcommunity: "Extremadamente xeromórfico"},

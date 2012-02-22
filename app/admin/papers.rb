@@ -1,9 +1,7 @@
 ActiveAdmin.register Paper do
-  menu :label => "Samples"
   
   form do |f|
     f.inputs "Paper" do
-      f.input :formatted_name
       f.input :sample
       f.input :subsample
       f.input :impact_factor

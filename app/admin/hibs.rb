@@ -1,3 +1,3 @@
-ActiveAdmin.register Hib do
-  menu :label => "HIBs"
+ActiveAdmin.register Hib, :as => "HIB" do
+  menu :label => "Human Impacts on Biodiversity"
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111206095351) do
+ActiveRecord::Schema.define(:version => 20120222095819) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(:version => 20111206095351) do
   end
 
   create_table "papers", :force => true do |t|
-    t.string   "formatted_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "impact_factor"
@@ -124,7 +123,7 @@ ActiveRecord::Schema.define(:version => 20111206095351) do
     t.string   "spontaneous_technical"
     t.integer  "climate_id"
     t.integer  "subsample"
-    t.integer  "sample"
+    t.integer  "sample_id"
   end
 
   create_table "papers_plantcommunities", :force => true do |t|
@@ -165,6 +164,12 @@ ActiveRecord::Schema.define(:version => 20111206095351) do
   create_table "ptraits", :force => true do |t|
     t.string   "ptrait"
     t.string   "ptrait_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "samples", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
